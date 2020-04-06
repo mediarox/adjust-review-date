@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package Mediarox_AdjustReviewDate
+ * @copyright Copyright 2019 (c) mediarox UG (haftungsbeschraenkt) (http://www.mediarox.de)
+ * @author Kristian Ernst <kernst@mediarox.de>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\Review\Block\Adminhtml\Add\Form" type="Mediarox\AdjustReviewDate\Block\Adminhtml\Add\Form" />
+    <preference for="Magento\Review\Block\Adminhtml\Edit\Form" type="Mediarox\AdjustReviewDate\Block\Adminhtml\Edit\Form" />
+    <preference for="Magento\Review\Model\ResourceModel\Review" type="Mediarox\AdjustReviewDate\Model\ResourceModel\Review" />
+</config>
