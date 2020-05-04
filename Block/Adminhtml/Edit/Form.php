@@ -229,18 +229,20 @@ class Form extends Generic
             ['label' => __('Review'), 'required' => true, 'name' => 'detail', 'style' => 'height:24em;']
         );
 
+        $dateFormat = $this->_localeDate->getDateFormat(\IntlDateFormatter::MEDIUM);
+        $timeFormat = $this->_localeDate->getTimeFormat(\IntlDateFormatter::MEDIUM);
         $fieldset->addField(
-        'created_at',
-        'date',
-        [
-            'name' => 'date',
-            'title' => __('Date'),
-            'label' => __('Date') . __(' (GMT)'),
-            'required' => false,
-            'date_format' => 'yyyy-mm-dd',
-            'time_format' => 'HH:mm:ss'
-        ]
-    );
+            'created_at',
+            'date',
+            [
+                'name' => 'date',
+                'title' => __('Date'),
+                'label' => __('Date') . __(' (GMT)'),
+                'required' => false,
+                'date_format' => $dateFormat,
+                'time_format' => $timeFormat
+            ]
+        );
 
         $form->setUseContainer(true);
         $form->setValues($review->getData());

@@ -152,6 +152,8 @@ class Form extends Generic
             ]
         );
 
+        $dateFormat = $this->_localeDate->getDateFormat(\IntlDateFormatter::MEDIUM);
+        $timeFormat = $this->_localeDate->getTimeFormat(\IntlDateFormatter::MEDIUM);
         $fieldset->addField(
             'created_at',
             'date',
@@ -160,8 +162,8 @@ class Form extends Generic
                 'title' => __('Date'),
                 'label' => __('Date') . __(' (GMT)'),
                 'required' => false,
-                'date_format' => 'yyyy-mm-dd',
-                'time_format' => 'HH:mm:ss'
+                'date_format' => $dateFormat,
+                'time_format' => $timeFormat
             ]
         );
 
